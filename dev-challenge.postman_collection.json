@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "925020d7-83b0-4fec-b13e-bed6e928cbb9",
+		"name": "dev-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/listaccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listaccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/openaccount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"accountHolderName\":\"James\",\r\n\t\"openingAmount\":100\r\n\t\r\n\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/openaccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"openaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/transfermoney",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"fromAccount\":\"SBI34568\",\r\n\t\"toAccount\":\"SBI10003\",\r\n\t\"amount\":100\r\n\t\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfermoney",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfermoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/account/SBI10003",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/SBI10003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"SBI10003"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
